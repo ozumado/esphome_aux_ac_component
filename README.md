@@ -33,7 +33,7 @@ If you have tested your air conditioner and `aux_ac` works with it, please let m
 The best way to report about your test results is writing a message in the [telegram](https://t.me/aux_ac) or [in the issue section](https://github.com/GrKoR/esphome_aux_ac_component/issues).<br />
 
 ## How to use it ##
-For correct component operation, you need hardware and firmware. The hardware description is located [in a separate file](docs/HARDWARE-EN.md).
+For correct component operation, you need hardware and firmware. The hardware description is located [in a separate file](docs/HARDWARE.md).
 
 ### Firmware: Integration aux_ac to your configuration ###
 You need [ESPHome](https://esphome.io) v.2025.2.0 or above. You can try esphome before 2025.2.0 but I can't guarantee error-free compilation of the examples.
@@ -59,7 +59,7 @@ external_components:
 uart:
   id: ac_uart_bus
   # ATTENTION! For TX and RX use GPIO4 (D2) and GPIO5 (D1) for NodeMCU-like boards!
-  # See docs for details: https://github.com/GrKoR/esphome_aux_ac_component/blob/master/docs/HARDWARE-EN.md
+  # See docs for details: https://github.com/GrKoR/esphome_aux_ac_component/blob/master/docs/HARDWARE.md
   tx_pin: GPIO1
   rx_pin: GPIO3
   baud_rate: 4800

@@ -3310,13 +3310,9 @@ namespace esphome
                 // User requested target temperature change
                 if (call.get_target_temperature().has_value())
                 {
-                    // выставлять температуру в режиме FAN не нужно
-                    if (cmd.mode != AC_MODE_FAN && _current_ac_state.mode != AC_MODE_FAN)
-                    {
-                        hasCommand = true;
-                        cmd.temp_target = _temp_target_normalise(*call.get_target_temperature()); // Send target temp to climate
-                        cmd.temp_target_matter = true;
-                    }
+                    hasCommand = true;
+                    cmd.temp_target = _temp_target_normalise(*call.get_target_temperature()); // Send target temp to climate
+                    cmd.temp_target_matter = true;
                 }
 
                 if (hasCommand)
